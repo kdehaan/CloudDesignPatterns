@@ -12,3 +12,4 @@ C:\Repos\cloudDesignPatterns\CloudDesignPatterns\obj\Debug\net9.0\refint\CloudDe
 C:\Repos\cloudDesignPatterns\CloudDesignPatterns\obj\Debug\net9.0\CloudDesignPatterns.pdb
 C:\Repos\cloudDesignPatterns\CloudDesignPatterns\obj\Debug\net9.0\CloudDesignPatterns.genruntimeconfig.cache
 C:\Repos\cloudDesignPatterns\CloudDesignPatterns\obj\Debug\net9.0\ref\CloudDesignPatterns.dll
+C:\Repos\cloudDesignPatterns\CloudDesignPatterns\obj\Debug\net9.0\CloudDesignPatterns.sourcelink.json
