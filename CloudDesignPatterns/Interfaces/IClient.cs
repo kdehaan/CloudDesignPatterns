@@ -2,7 +2,7 @@
 // Copyright (c) kdehaan. All rights reserved.
 // </copyright>
 
-namespace CloudDesignPatterns.Client
+namespace CloudDesignPatterns.Interfaces
 {
     /// <summary>
     /// Interface for a basic client.
@@ -17,8 +17,9 @@ namespace CloudDesignPatterns.Client
         /// <summary>
         /// Send a message to the server.
         /// </summary>
+        /// <param name="endpoint">endpoint to send to.</param>
         /// <param name="message">message to send.</param>
-        void Send(string message);
+        void Send(string endpoint, string message);
 
         /// <summary>
         /// Disconnect from the server.

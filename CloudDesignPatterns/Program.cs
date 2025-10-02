@@ -3,8 +3,8 @@
 // </copyright>
 
 using System.Diagnostics;
-using CloudDesignPatterns.Client;
-using CloudDesignPatterns.Server;
+using CloudDesignPatterns.AsyncRequestReply;
+using CloudDesignPatterns.BaseComponents;
 
 /// <summary>
 /// Run as "server" or "client" with appropriate arguments.
@@ -81,14 +81,14 @@ public class Program
 
     private static void CreateServer(int port = 5000)
     {
-        var server = new ServerApp(port);
+        var server = new AsyncRequestServer(port);
         Console.Title = $"Server - Port:{port}";
         server.Start();
     }
 
     private static void CreateClient(string serverAddress = "127.0.0.1", int port = 5000)
     {
-        var client = new ClientApp(serverAddress, port);
+        var client = new BaseClientApp(serverAddress, port);
         Console.Title = $"Client - {serverAddress}:{port}";
         client.Connect();
         Console.WriteLine("Type messages to send. Type 'exit' to quit.");
@@ -100,7 +100,8 @@ public class Program
                 break;
             }
 
-            client.Send(line);
+            var args = line.Split('/', 2);
+            client.Send(args[0], args[1]);
         }
 
         client.Disconnect();
