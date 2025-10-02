@@ -1,13 +1,21 @@
-﻿using CloudDesignPatterns;
+﻿// <copyright file="Program.cs" company="kdehaan">
+// Copyright (c) kdehaan. All rights reserved.
+// </copyright>
+
 using System.Diagnostics;
+using CloudDesignPatterns.Client;
+using CloudDesignPatterns.Server;
 
-// See https://aka.ms/new-console-template for more information
-// Run as "server" or "client" with appropriate arguments
-
-class Program
+/// <summary>
+/// Run as "server" or "client" with appropriate arguments.
+/// </summary>
+public class Program
 {
-
-    static void Main(string[] args)
+    /// <summary>
+    /// Main entry thread of the application.
+    /// </summary>
+    /// <param name="args">process arguments.</param>
+    public static void Main(string[] args)
     {
         if (args.Length == 0)
         {
@@ -16,10 +24,14 @@ class Program
             while ((line = Console.ReadLine()) != null)
             {
                 if (line.Equals("exit", StringComparison.OrdinalIgnoreCase))
+                {
                     break;
+                }
+
                 CreateProcess(line);
             }
         }
+
         if (args[0].Equals("server", StringComparison.OrdinalIgnoreCase))
         {
             int port = args.Length > 1 ? int.Parse(args[1]) : 5000;
@@ -46,7 +58,7 @@ class Program
             RedirectStandardOutput = false,
             RedirectStandardError = false,
             CreateNoWindow = false,
-            WindowStyle = ProcessWindowStyle.Normal
+            WindowStyle = ProcessWindowStyle.Normal,
         };
         try
         {
@@ -57,15 +69,14 @@ class Program
                     Console.WriteLine("Failed to start process.");
                     throw new InvalidOperationException("Process.Start returned null.");
                 }
+
                 Console.WriteLine($"Created Process {process.Id}");
-                //process.WaitForExit();
             }
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Failed to start process: {ex.Message}");
         }
-
     }
 
     private static void CreateServer(int port = 5000)
@@ -85,10 +96,13 @@ class Program
         while ((line = Console.ReadLine()) != null)
         {
             if (line.Equals("exit", StringComparison.OrdinalIgnoreCase))
+            {
                 break;
+            }
+
             client.Send(line);
         }
+
         client.Disconnect();
     }
-
 }
