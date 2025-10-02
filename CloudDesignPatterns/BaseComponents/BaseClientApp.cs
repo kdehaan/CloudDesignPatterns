@@ -1,16 +1,17 @@
-// <copyright file="ClientApp.cs" company="kdehaan">
+// <copyright file="BaseClientApp.cs" company="kdehaan">
 // Copyright (c) kdehaan. All rights reserved.
 // </copyright>
 
-namespace CloudDesignPatterns.Client
+namespace CloudDesignPatterns.BaseComponents
 {
     using System.Net.Sockets;
     using System.Text;
+    using CloudDesignPatterns.Interfaces;
 
     /// <summary>
     /// Base Client application.
     /// </summary>
-    public class ClientApp : IClient
+    public class BaseClientApp : IClient
     {
         private readonly string host;
         private readonly int port;
@@ -18,11 +19,11 @@ namespace CloudDesignPatterns.Client
         private NetworkStream? stream;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ClientApp"/> class.
+        /// Initializes a new instance of the <see cref="BaseClientApp"/> class.
         /// </summary>
-        /// <param name="host">host address.</param>
-        /// <param name="port">port.</param>
-        public ClientApp(string host, int port)
+        /// <param name="host">server host.</param>
+        /// <param name="port">server port.</param>
+        public BaseClientApp(string host, int port)
         {
             this.host = host;
             this.port = port;
@@ -38,14 +39,15 @@ namespace CloudDesignPatterns.Client
         }
 
         /// <inheritdoc/>
-        public void Send(string message)
+        public void Send(string endpoint, string message)
         {
             if (this.stream == null)
             {
                 return;
             }
 
-            var data = Encoding.UTF8.GetBytes(message);
+            var request = $"{endpoint}/{message}";
+            var data = Encoding.UTF8.GetBytes(request);
             this.stream.Write(data, 0, data.Length);
 
             var buffer = new byte[1024];

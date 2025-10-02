@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CloudDesignPatterns")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45496ad1b209641717b5ed0545275fae7473bf75")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+198aa2e3195248cc0f3b2c35401e37f8b983445c")]
 [assembly: System.Reflection.AssemblyProductAttribute("CloudDesignPatterns")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CloudDesignPatterns")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
