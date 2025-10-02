@@ -1,0 +1,14 @@
+C:\Repos\cloudDesignPatterns\CloudDesignPatterns\bin\Debug\net9.0\CloudDesignPatterns.exe
+C:\Repos\cloudDesignPatterns\CloudDesignPatterns\bin\Debug\net9.0\CloudDesignPatterns.deps.json
+C:\Repos\cloudDesignPatterns\CloudDesignPatterns\bin\Debug\net9.0\CloudDesignPatterns.runtimeconfig.json
+C:\Repos\cloudDesignPatterns\CloudDesignPatterns\bin\Debug\net9.0\CloudDesignPatterns.dll
+C:\Repos\cloudDesignPatterns\CloudDesignPatterns\bin\Debug\net9.0\CloudDesignPatterns.pdb
+C:\Repos\cloudDesignPatterns\CloudDesignPatterns\obj\Debug\net9.0\CloudDesignPatterns.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\cloudDesignPatterns\CloudDesignPatterns\obj\Debug\net9.0\CloudDesignPatterns.AssemblyInfoInputs.cache
+C:\Repos\cloudDesignPatterns\CloudDesignPatterns\obj\Debug\net9.0\CloudDesignPatterns.AssemblyInfo.cs
+C:\Repos\cloudDesignPatterns\CloudDesignPatterns\obj\Debug\net9.0\CloudDesignPatterns.csproj.CoreCompileInputs.cache
+C:\Repos\cloudDesignPatterns\CloudDesignPatterns\obj\Debug\net9.0\CloudDesignPatterns.dll
+C:\Repos\cloudDesignPatterns\CloudDesignPatterns\obj\Debug\net9.0\refint\CloudDesignPatterns.dll
+C:\Repos\cloudDesignPatterns\CloudDesignPatterns\obj\Debug\net9.0\CloudDesignPatterns.pdb
+C:\Repos\cloudDesignPatterns\CloudDesignPatterns\obj\Debug\net9.0\CloudDesignPatterns.genruntimeconfig.cache
+C:\Repos\cloudDesignPatterns\CloudDesignPatterns\obj\Debug\net9.0\ref\CloudDesignPatterns.dll
